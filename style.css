@@ -1,0 +1,96 @@
+h1{
+	text-align: center;
+
+}
+.maininfo{
+	display: flex;
+	flex-direction: row;
+	flex: 100%;
+}
+
+.mainphoto{
+	background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTO3ahFpnHA8U8rAEnvlaT3p5du1AJaNGBJR2JUi6Eq2gI0510f') no-repeat center;
+	width: 20%;
+	min-height: 215px;
+}
+
+.photo{
+	
+	height: 250px;	
+	width: 250px;
+	display: flex;
+	flex: 50%;
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+	flex: 50%;
+	margin-left: 100px;
+}
+
+.opportunity{
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	display: flex;
+	flex-direction: row;
+	
+}
+.tablinks {
+	/*display: block;*/
+	text-align: center;
+	width: 200px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    max-height: 20px;
+}
+.tablinks:hover {
+	background-color: #ddd;
+}
+.tablinks:active {
+	background-color: #ccc;
+}
+.tabcontent_info{
+	padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: flex;
+	flex-direction: row;
+
+}
+
+.paragraph{
+	font-weight: bold;
+	font-size: 17px;
+	margin: 5px;
+}
+
+.schoolcolor {
+	color: black;
+	margin: 0px 0px 5px;
+}
+
+.spanstyle{
+	display: block;
+	font-style: normal;
+}
+
+.active{
+	display: block;
+	background-color: #a3a3a3;
+}
+
+.notactive{
+	display: none;
+}
+
+
+
