@@ -14,14 +14,12 @@
  	</header>
 
  	<section class="maininfo">
- 		<div class="mainphoto">
- 		</div>
+ 		<div class="mainphoto"></div>
  		<div class="info">
  			<p class="phone">Phone: <a href="tel:+380502814500" >+38 050 281 45 00</a></p>
  			<p class="adress">Adress: Kiev, Bykova str.</p>
  			<p class="email">Email: <a href="mailto:bewitch.view@gmail.com">bewitch.view@gmail.com</a></p>
  		</div>
-
  	</section>
  	
  	<main>
@@ -29,30 +27,29 @@
  			<a class="tablinks active" onclick="openContent(event, 'content_skills' )">Skills</a>
  			<a class="tablinks" onclick="openContent(event, 'content_ed')">Education</a>
  			<a class="tablinks" onclick="openContent(event, 'content_ex')">Experience</a>
- 			<a class="tablinks" onclick="openContent(event, 'video')">Video</a>
  		</nav>
  		<section class="tabcontent_info">
  			<article class="tabcontent" id="content_skills"></article>
  			<article class="tabcontent notactive" id="content_ed"></article>
  			<article class="tabcontent notactive" id="content_ex"></article>
- 			<article class="tabcontent notactive" id="video"> 
- 				<video id="vidos" width="420">
-   					 <source src="http://download.blender.org/peach/trailer/trailer_400p.ogg" type="video/mp4">
- 				 </video><br/>
- 				 <button onclick="playVideo()">Play</button>
- 				 <button onclick="pauseVideo()">Pause</button>
- 				 <button onclick="playPause()">Play/Pause</button>
- 				 <button type="button" id="full-screen">Full-Screen</button>
- 				 <button id="mute">Mute</button>
- 				 <input  id="volume-bar" class="vol" type=range min=0 max=1 step="0.1">
- 				 
- 				 
- 			</article>
  		</section>
-
-
+ 		
+ 	<section class="main-video">
+ 		<article id="video"> 
+ 			<video id="vidos" width="600">
+   				<source src="http://download.blender.org/peach/trailer/trailer_400p.ogg" type="video/mp4">
+ 			</video><br/>
+ 			<button onclick="playVideo()">Play</button>
+ 			<button onclick="pauseVideo()">Pause</button>
+ 			<button onclick="playPause()">Play/Pause</button>
+ 			<button type="button" id="full-screen">Full-Screen</button>
+ 			<button id="mute">Mute</button>
+ 			<input  id="volume-bar" class="vol" type=range min=0 max=1 step="0.1"> 
+ 		</article>
+ 	</section>
  	</main>
  
- <script src="javascript.js"></script>
+ 	<script src="javascript.js"></script>
+ 	<script src="video.js"></script>
 </body>
 </html>
