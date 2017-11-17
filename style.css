@@ -1,7 +1,7 @@
 h1{
 	text-align: center;
-
 }
+
 .maininfo{
 	display: flex;
 	flex-direction: row;
@@ -51,12 +51,15 @@ h1{
     transition: 0.3s;
     max-height: 20px;
 }
+
 .tablinks:hover {
 	background-color: #ddd;
 }
+
 .tablinks:active {
 	background-color: #ccc;
 }
+
 .tabcontent_info{
 	padding: 6px 12px;
     border: 1px solid #ccc;
@@ -94,6 +97,13 @@ h1{
 
 #vidos{
 	margin-top: 20px;
+	position: relative;
+}
+
+.videobuttons{
+	position: absolute;
+	bottom: -180px;
+	left: 20px;
 }
 
 

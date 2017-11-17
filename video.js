@@ -14,36 +14,39 @@ function pauseVideo() {
 
 function playPause() {
   if (myVideo.paused) {
-    myVideo.play();
+      myVideo.play();
   } else {
-	myVideo.pause();
-  }
+	   myVideo.pause();
+    }
 };
 
 function mutePlayStop() {
   if (myVideo.muted == false) {
     myVideo.muted = true;
-	muteButton.innerHTML = "Unmute";
+	  muteButton.innerHTML = "Unmute";
   } else {
-	myVideo.muted = false;
-	muteButton.innerHTML = "Mute";
-  }
-};
+	   myVideo.muted = false;
+	   muteButton.innerHTML = "Mute";
+    }
+}; 
 
 function setHalfVolume() { 
   rangeButton.volume = 0.5;
 };
 
+function controllFullScreen() { 
+  if (myVideo.requestFullScreen) {
+    myVideo.requestFullScreen();
+    myVideo.width = 1000;
+  } else if (myVideo.webkitRequestFullScreen()) {
+      myVideo.webkitRequestFullScreen();
+    }
+};
+
 var muteButton = document.getElementById("mute");
     muteButton.addEventListener("click", mutePlayStop);
 
-fullScreenButton.addEventListener("click", function() {
-  if (video.requestFullscreen) {
-    video.requestFullscreen();
-  } else if (video.webkitRequestFullscreen()) {
-    video.webkitRequestFullscreen();
-  }
-});
+fullScreenButton.addEventListener("click", controllFullScreen);
 
 volumeBar.addEventListener("change", function() {
   vidos.volume = volumeBar.value;

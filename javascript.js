@@ -1,32 +1,19 @@
-
-
- // 		for (i = 0; i < education.length; i++) {
-// 			for (var key in education[i] ) {
-// 				var span = document.createElement('p');
-// 				var node = document.createTextNode(key +' - ' + education[i][key] );
-// 				span.appendChild(node);
-// 				element.appendChild(span);
-// 			}
-// 		}
-
-	
-// };
 function message () {
   confirm ("Do you call?");
-}
+};
 
 var skill = ['Listening', 'Nonverbal Communication','Clarity','Friendliness'];
 
 function myOpportunity () {
   var element = document.getElementById('content_skills');
 
-  for (var i = 0; i < skill.length; i++) {
-	var para = document.createElement('p');
-	var node = document.createTextNode (skill[i]);
-	para.appendChild(node);
-	element.appendChild(para);
-	para.setAttribute('class', 'paragraph');
- 	}
+	for (var i = 0; i < skill.length; i++) {
+		var para = document.createElement('p');
+		var node = document.createTextNode (skill[i]);
+		para.appendChild(node);
+		element.appendChild(para);
+		para.setAttribute('class', 'paragraph');
+   }
 };
 
 document.addEventListener("DOMContentLoaded", renderMyData);
@@ -43,34 +30,34 @@ function myEducation () {
   var element = document.getElementById('content_ed');
   
   for (var i = 0; i < education.length; i++) {
-	for (var key in education[i] ) {
-      var div = document.createElement('div'),
-		  header = document.createElement('h3'),
-		  span = document.createElement('span');
-		  ii = document.createElement('i'),
+		for (var key in education[i] ) {
+      		var div = document.createElement('div'),
+		  		header = document.createElement('h3'),
+		  		span = document.createElement('span');
+		  		ii = document.createElement('i'),
 
-		  textDataHeader = 'School: ' +  education[i].school,
-		  textDataCity = 'City: ' +  education[i].city,
-		  textDataYear = 'Year: ' +  education[i].year,
+		  		textDataHeader = 'School: ' +  education[i].school,
+		  		textDataCity = 'City: ' +  education[i].city,
+		  		textDataYear = 'Year: ' +  education[i].year,
 						
-		  nodeHeader = document.createTextNode(textDataHeader),
-		  nodeSpanCity = document.createTextNode(textDataCity),
-		  nodeIYear = document.createTextNode(textDataYear);
+		  		nodeHeader = document.createTextNode(textDataHeader),
+		  		nodeSpanCity = document.createTextNode(textDataCity),
+		  		nodeIYear = document.createTextNode(textDataYear);
 
-		  header.appendChild(nodeHeader);
-		  span.appendChild(nodeSpanCity);
-		  ii.appendChild(nodeIYear);
+		  		header.appendChild(nodeHeader);
+		  		span.appendChild(nodeSpanCity);
+		 		ii.appendChild(nodeIYear);
 					
-		  header.setAttribute('class', 'schoolcolor');
-		  ii.setAttribute('class', 'spanstyle');
+		  		header.setAttribute('class', 'schoolcolor');
+		  		ii.setAttribute('class', 'spanstyle');
 
-	      div.appendChild(header);
-		  div.appendChild(span);
-		  div.appendChild(ii);
+	      		div.appendChild(header);
+		  		div.appendChild(span);
+		  		div.appendChild(ii);
 		}
-		  div.setAttribute('class', 'divstyle')
-		  element.appendChild(div); 
-  };
+			div.setAttribute('class', 'divstyle')
+		  	element.appendChild(div); 
+    };
 		
 };
 
@@ -112,24 +99,23 @@ function openContent (evt, oppName) {
   console.log(evt);
   
   var i, tabcontent, tablinks;
+    	tabcontent = document.getElementsByClassName("tabcontent");
 
-  tabcontent = document.getElementsByClassName("tabcontent");
-	for ( i = 0; i < tabcontent.length; i++ ) {
-	tabcontent[i].style.display = "none";
-    };
+		for ( i = 0; i < tabcontent.length; i++ ) {
+			tabcontent[i].style.display = "none";
+    	};
 
-	tablinks = document.getElementsByClassName("tablinks");
-	  for ( i = 0; i < tablinks.length; i++) {
-	  tablinks[i].className = tablinks[i].className.replace(" active", "");
-	};
+		tablinks = document.getElementsByClassName("tablinks");
+	  
+	  	for ( i = 0; i < tablinks.length; i++) {
+	  		tablinks[i].className = tablinks[i].className.replace(" active", "");
+		};
 
-	document.getElementById(oppName).style.display = "block";
-    evt.currentTarget.className += " active";
+		document.getElementById(oppName).style.display = "block";
+   		 evt.currentTarget.className += " active";
 };
 
 
 
-
-	
 
 
