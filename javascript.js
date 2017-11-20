@@ -55,8 +55,8 @@ function myEducation () {
 		  		div.appendChild(span);
 		  		div.appendChild(ii);
 		}
-			div.setAttribute('class', 'divstyle')
-		  	element.appendChild(div); 
+				div.setAttribute('class', 'divstyle')
+		  		element.appendChild(div); 
     };
 		
 };
